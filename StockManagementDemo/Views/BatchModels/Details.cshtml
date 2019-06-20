@@ -1,0 +1,43 @@
+﻿@model StockManagementDemo.Models.BatchModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BatchModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fruit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fruit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Variety)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Variety)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BatchID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

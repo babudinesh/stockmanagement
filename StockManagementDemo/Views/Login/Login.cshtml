@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h4>Login</h4>
+        <div class="row">
+            <div class="col-md-4">
+                <p>UserName: </p>
+            </div>
+            <div class="col-md-4">
+                <input id="txtUserName" type="text" value="John" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <p>Password: </p>
+            </div>
+            <div class="col-md-4">
+                <input id="txtPwd" type="password" value="John" />
+            </div>
+        </div>
+
+        <div>
+            @Html.ActionLink("Login", "Index", "BatchModels")
+        </div>
+    </div>
+</div>

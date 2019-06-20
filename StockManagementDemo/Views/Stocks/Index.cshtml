@@ -1,0 +1,42 @@
+﻿@model IEnumerable<StockManagementDemo.Models.Stock>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fruit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Variety)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fruit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Variety)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        
+    </tr>
+}
+
+</table>
